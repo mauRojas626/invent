@@ -1,0 +1,141 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+}
+  
+  /* 980px / 16px = 61.25em */
+@media (max-width: 980px) {
+    html {
+      font-size: 58%;
+    }
+}
+  
+  /* 460px / 16px = 28.75em */
+@media (max-width: 460px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    margin-bottom: 1%;
+    font-size: 5rem;
+    color: #2c3e50;
+    animation-name: titulo;
+    animation-duration: 2s;
+}
+@keyframes titulo {
+    0%{opacity: 0; margin-bottom: 5rem; color: white}
+    100%{opacity: 100;}
+}
+
+@media (min-width: 480px) {
+    h1{
+        font-size: 6rem;
+    }
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color:#2c3e50;
+}
+
+ul {
+    list-style: none;
+}
+#boton{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+button{
+    padding: 2rem 3rem;
+    border-radius: 50px;
+}
+a{
+    text-decoration: none;
+}
+
+#principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    background: #2c3e50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #faf5ef, #FFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #faf5ef, #FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#entrar{
+    width: 80%;
+    max-width: 400px;
+}
+#ingresar{
+    border: none;
+    background-color: #2c3e50;
+    width: 100%;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+img {
+    display: block;
+}
+#logopucp, #logoinvent{
+    height: 10rem;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+#ingresar:hover{
+    background-color: black;
+}
+
+.code {
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease-out;
+    margin: 10px;
+}
+  
+#ingresar:hover .code {
+    color: #ff7f50;
+}

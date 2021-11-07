@@ -1,0 +1,136 @@
+#video
+{
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+    height: 95vh;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+}
+  
+  /* 980px / 16px = 61.25em */
+@media (max-width: 980px) {
+    html {
+      font-size: 58%;
+    }
+}
+  
+  /* 460px / 16px = 28.75em */
+@media (max-width: 460px) {
+    html {
+        font-size: 55%;
+    }
+}
+.contenedor{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.iconbtn{
+    width: 7rem;
+    height: 7rem;
+    margin:2rem;
+    position: relative;
+    font-size: 3rem;
+    color: #2c3e50;
+    border: 3px solid #faf5ef;
+    border-radius: 50%;
+}
+.iconbtn::before{
+    position:absolute;
+    z-index: 1;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.iconbtn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    z-index: 0;
+    border: 3px solid #faf5ef;
+    background-color: #faf5ef;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.iconbtn:hover::after{
+    transform: scale(0.9);
+}
+
+button{
+    padding: 1rem 2rem;
+    border-radius: 50px;
+}
+
+#controles {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    background-color: #2c3e50;
+}
+
+textarea{
+    margin: 1rem;
+    min-height: 120px;
+    width: 95%;
+    height: 70%;
+    padding: 0.625rem;
+    resize: none;
+}
+
+#grabacion {
+    position: absolute;
+    margin-left: 310px;
+    margin-bottom: 110px;
+  }
+body{
+    background: #2c3e50;  /* fallback for old browsers */
+}
+@media (max-width: 720px) {
+    #controles {
+        background-color: #2c3e50;
+        width: 100%;
+        height: 45vh;
+        position: inherit;
+    }
+    #grabacion{
+        position: inherit;
+        margin: 0px;
+        height: 50vh;
+        background-color: #2c3e50;
+    }
+    #video{
+        position: relative;
+        height: 100%;
+    }
+    #botones{
+        position: absolute;
+        top: 80%;
+        left: 30%;
+        z-index: 2;
+    }
+}
